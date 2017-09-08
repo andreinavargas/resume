@@ -29,8 +29,8 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
+  font-size: 45px;
+  color: #33FFAA;
   line-height: 48px;
   display: inline;
 }
@@ -38,7 +38,7 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #333;
   line-height: 29px;
   padding: 10px;
 }
@@ -66,13 +66,13 @@ h5 {
 }
 
 #header span {
-  color: white;
+  color: #DDDDDD;
 }
 
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #333;
   line-height: 16px;
   float: left;
 }
@@ -84,6 +84,10 @@ h5 {
   line-height: 16px;
   float: right;
 
+}
+
+button {
+  position:fixed;
 }
 
 p {
@@ -103,12 +107,14 @@ a {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
-  line-height: 28px;
+  line-height: 20px;
+  margin-bottom: 25px;
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #33FFAA;
   display: none;
+  padding: 0;
 }
 
 .orange {

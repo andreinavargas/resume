@@ -97,65 +97,6 @@ $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
 
-
-function displayWork(works) {
-
-  for (i in works) {
-    var work = works[i];
-    $("#workExperience").append(HTMLworkStart);
-
-    var formated_employer = HTMLworkEmployer.replace("%data%", work.employer);
-    //current job position
-    var formated_job_position = HTMLworkTitle.replace("%data%", work.job_position);
-
-    var concatenated = formated_employer + formated_job_position;
-
-    $(".work-entry:last").append(concatenated);
-
-    // years working
-    var formated_year_worked = HTMLworkDates.replace("%data%", work.years_worked);
-    $(".work-entry:last").append(formated_year_worked);
-
-    // city business of work
-    var formated_city = HTMLworkLocation.replace("%data%", work.location);
-    $(".work-entry:last").append(formated_city);
-
-    var formated_description = HTMLworkDescription.replace("%data%", work.description);
-    $(".work-entry:last").append(formated_description);
-  }
-}
-
-
-function displayStudies(studies) {
-  for (i in studies) {
-    var study = studies[i];
-
-    $("#education").append(HTMLschoolStart);
-
-    //school_name
-    var formated_school_name = HTMLschoolName.replace("%data%", study.school_name);
-
-    //school degree 
-    var formated_school_degree = HTMLschoolDegree.replace("%data%", study.degree);
-
-    /// This is a way to put this elements united 
-    var concatenated_edu = formated_school_name + formated_school_degree;
-    $(".education-entry:last").append(concatenated_edu);
-
-    //school_dates
-    var formated_dates = HTMLschoolDates.replace("%data%", study.school_dates);
-    $(".education-entry:last").append(formated_dates);
-
-    ///Location of the university
-    var formated_location_u = HTMLschoolLocation.replace("%data%", study.location);
-    $(".education-entry:last").append(formated_location_u);
-
-    //Major of the study
-    var formated_major = HTMLschoolMajor.replace("%data%", study.major); 
-    $(".education-entry:last").append(formated_major);
-  }
-}
-
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.
 See the documentation below for more details.
@@ -179,7 +120,7 @@ function initializeMap() {
   For the map to be displayed, the googleMap var must be
   appended to #mapDiv in resumeBuilder.js.
   */
-  map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions);
+  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
   /*
@@ -209,7 +150,6 @@ function initializeMap() {
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
-    console.log(locations);
 
     return locations;
   }
