@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 function inName(name) {
   var last_name = name.split(" ")[2];
-  var first_name = name.split(" ")[0]
+  var first_name = name.split(" ")[0];
   last_name = last_name.toUpperCase();
 
   return first_name + " " + last_name;
