@@ -12,9 +12,6 @@ var bio = {
 		location: 'Madrid, Spain'
 	},
 	display: function () {
-		var formatted_name;
-		var formatted_role;
-
 		// Header with name
 		var formatted_name = HTMLheaderName.replace("%data%", this.name);
 		$("#header").append(formatted_name);
@@ -53,7 +50,7 @@ var bio = {
 			$("#skills").append(formated_skills);
 		}
 	}
-}
+};
 
 //Work
 var work = {
@@ -155,8 +152,8 @@ var education = {
 			$(".education-entry:last").append(formated_major);
 		}
 
-		for (var i = 0; i < this.onlineCourses.length; i++) {
-			var course = this.onlineCourses[i];
+		for (var j = 0; j < this.onlineCourses.length; j++) {
+			var course = this.onlineCourses[j];
 
 			$("#education").append(HTMLonlineClasses);
 			$("#education").append(HTMLschoolStart);
@@ -166,8 +163,8 @@ var education = {
 			var concatenated_course = formated_course_name + formated_course_school;
 			$(".education-entry:last").append(concatenated_course);
 
-			var formated_dates = HTMLonlineDates.replace("%data%", course.dates);
-			$(".education-entry:last").append(formated_dates);
+			var formated_dates_c = HTMLonlineDates.replace("%data%", course.dates);
+			$(".education-entry:last").append(formated_dates_c);
 
 			var course_url = HTMLonlineURL.replace("%data%", course.url); 
 			$(".education-entry:last").append(course_url);
